@@ -7,11 +7,11 @@ import re
 import urllib2
 pattern=re.compile("^\s+[<]td[>]15CS[0-9]+$")#Roll_no
 pattern01=re.compile("^\s+[<]td[>]15CS[0-9]+[<][/]td[>].+$")#roll_no
-pattern1=re.compile('^\s+[<]td[>][<]a href[=]["][/][~]wbcm[/]cgi[-]bin[/]wbcm[/]common[/]showMarks[.]cgi[?]ccode[=]cs29003[&]year[=]2016[&]sem[=]a[&]catno[=][0-9][&]asgnid[=][0-9][&]roll[=][0-9]+CS[0-9]+["][>][0-9][0-9][*][<][/]a[>]$')#marks
-pattern5=re.compile('^\s+[<]td[>][<]a href[=]["][/][~]wbcm[/]cgi[-]bin[/]wbcm[/]common[/]showMarks[.]cgi[?]ccode[=]cs29003[&]year[=]2016[&]sem[=]a[&]catno[=][0-9][&]asgnid[=][0-9][&]roll[=][0-9]+CS[0-9]+["][>][0-9][*][<][/]a[>]$')
-pattern3=re.compile('^\s+[<]td[>][<]a href[=]["][/][~]wbcm[/]cgi[-]bin[/]wbcm[/]common[/]showMarks[.]cgi[?]ccode[=]cs29003[&]year[=]2016[&]sem[=]a[&]catno[=][0-9][&]asgnid[=][0-9][&]roll[=][0-9]+CS[0-9]+["][>][<]b[>][?][<]b[>][<][/]a[>]$')
-pattern4=re.compile('^\s+[<]td[>][<]a href[=]["][/][~]wbcm[/]cgi[-]bin[/]wbcm[/]common[/]showMarks[.]cgi[?]ccode[=]cs29003[&]year[=]2016[&]sem[=]a[&]catno[=][0-9][&]asgnid[=][0-9][&]roll[=][0-9]+CS[0-9]+["][>][0-9][<][/]a[>]$')
-pattern6=re.compile('^\s+[<]td[>][<]a href[=]["][/][~]wbcm[/]cgi[-]bin[/]wbcm[/]common[/]showMarks[.]cgi[?]ccode[=]cs29003[&]year[=]2016[&]sem[=]a[&]catno[=][0-9][&]asgnid[=][0-9][&]roll[=][0-9]+CS[0-9]+["][>][0-9][0-9][<][/]a[>]$')
+pattern1=re.compile('^\s+[<]td[>][<]a href[=]["][/][~]wbcm[/]cgi[-]bin[/]wbcm[/]common[/]showMarks[.]cgi[?]ccode[=]cs29003[&]year[=]2016[&]sem[=]a[&]catno[=][0-9][&]asgnid[=][0-9]+[&]roll[=][0-9]+CS[0-9]+["][>][0-9][0-9][*][<][/]a[>]$')#marks
+pattern5=re.compile('^\s+[<]td[>][<]a href[=]["][/][~]wbcm[/]cgi[-]bin[/]wbcm[/]common[/]showMarks[.]cgi[?]ccode[=]cs29003[&]year[=]2016[&]sem[=]a[&]catno[=][0-9][&]asgnid[=][0-9]+[&]roll[=][0-9]+CS[0-9]+["][>][0-9][*][<][/]a[>]$')
+pattern3=re.compile('^\s+[<]td[>][<]a href[=]["][/][~]wbcm[/]cgi[-]bin[/]wbcm[/]common[/]showMarks[.]cgi[?]ccode[=]cs29003[&]year[=]2016[&]sem[=]a[&]catno[=][0-9][&]asgnid[=][0-9]+[&]roll[=][0-9]+CS[0-9]+["][>][<]b[>][?][<]b[>][<][/]a[>]$')
+pattern4=re.compile('^\s+[<]td[>][<]a href[=]["][/][~]wbcm[/]cgi[-]bin[/]wbcm[/]common[/]showMarks[.]cgi[?]ccode[=]cs29003[&]year[=]2016[&]sem[=]a[&]catno[=][0-9][&]asgnid[=][0-9]+[&]roll[=][0-9]+CS[0-9]+["][>][0-9][<][/]a[>]$')
+pattern6=re.compile('^\s+[<]td[>][<]a href[=]["][/][~]wbcm[/]cgi[-]bin[/]wbcm[/]common[/]showMarks[.]cgi[?]ccode[=]cs29003[&]year[=]2016[&]sem[=]a[&]catno[=][0-9][&]asgnid[=][0-9]+[&]roll[=][0-9]+CS[0-9]+["][>][0-9][0-9][<][/]a[>]$')
 pattern8=re.compile("^\s+[<]td align[=]left[>].+[<][/]td[>]$")#name
 fo=urllib2.urlopen("http://cse.iitkgp.ac.in/~wbcm/wbcm/subLog/cs290032016a/sec1/")
 to=open("xyz.txt",'w')
