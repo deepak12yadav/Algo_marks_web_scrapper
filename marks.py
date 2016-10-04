@@ -64,9 +64,17 @@ for i in range(1,len(Roll_no)):
 						Name[h]=Name[h+1]
 						Name[h+1]=temp
 		j+=1
+
+hilight=raw_input('Please Enter your Roll_no :')
+
 u=0
 for i in Marks:
 		if u>=len(Roll_no):
 				break
-		print u+1,"--",Roll_no[u],"--",Name[u],"  ",i
+		if(Roll_no[u]!=hilight):
+			print u+1,"--",Roll_no[u],"--",Name[u],"  ",i
+		else:
+			print'***************************************'
+			print u+1,"--",Roll_no[u],"--",Name[u],"  ",i
+			print'***************************************'
 		u+=1
